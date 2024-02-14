@@ -19,15 +19,15 @@
   <title>HashMap - Paros的博客</title>
 
   
-    <meta name="description" content="基于哈希表实现了Map接口。非线程安全。拉链法。数组+链表（长于64会转化为红黑树以减少搜索时间） 构造方法：put方法： 123public V put(K key, V value) &#123;    return putVal(hash(key), key, value, false, true);&#125; get方法: 1234public V get(Object key) &amp;#1">
+    <meta name="description" content="基于哈希表实现了Map接口。非线程安全。拉链法。数组+链表（长于64会转化为红黑树以减少搜索时间） 构造方法： 1HashMap&lt;String, Integer&gt; map &#x3D; new HashMap&lt;&gt;(); put方法： 123public V put(K key, V value) &#123;    return putVal(hash(key), key, valu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashMap">
 <meta property="og:url" content="http://example.com/2024/02/15/HashMap/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="基于哈希表实现了Map接口。非线程安全。拉链法。数组+链表（长于64会转化为红黑树以减少搜索时间） 构造方法：put方法： 123public V put(K key, V value) &#123;    return putVal(hash(key), key, value, false, true);&#125; get方法: 1234public V get(Object key) &amp;#1">
+<meta property="og:description" content="基于哈希表实现了Map接口。非线程安全。拉链法。数组+链表（长于64会转化为红黑树以减少搜索时间） 构造方法： 1HashMap&lt;String, Integer&gt; map &#x3D; new HashMap&lt;&gt;(); put方法： 123public V put(K key, V value) &#123;    return putVal(hash(key), key, valu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-14T16:32:36.000Z">
-<meta property="article:modified_time" content="2024-02-14T17:04:22.321Z">
+<meta property="article:modified_time" content="2024-02-14T17:28:53.238Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
   
@@ -75,7 +75,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title active" href="/2024/02/15/HashMap/"><span class="title">HashMap</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/02/15/HashMap/"><span class="title">HashMap</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -89,7 +89,7 @@
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-14T16:32:36.000Z">2024-02-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T17:04:22.321Z">2024-02-15</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-14T16:32:36.000Z">2024-02-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T17:28:53.238Z">2024-02-15</time></span></div></div>
 </div>
 
     
@@ -101,10 +101,12 @@
     
   </div>
   </div><article class="md-text content"><p>基于哈希表实现了Map接口。非线程安全。拉链法。<br>数组+链表（长于64会转化为红黑树以减少搜索时间）</p>
-<p>构造方法：<br>put方法：</p>
+<p>构造方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();</span><br></pre></td></tr></table></figure>
+<p>put方法：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public V put(K key, V value) &#123;</span><br><span class="line">    return putVal(hash(key), key, value, false, true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>get方法:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public V get(Object key) &#123;</span><br><span class="line">    Node&lt;K,V&gt; e;</span><br><span class="line">    return (e = getNode(hash(key), key)) == null ? null : e.value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public V get(Object key) &#123;</span><br><span class="line">    Node&lt;K,V&gt; e;</span><br><span class="line">    return (e = getNode(hash(key), key)) == null ? null : e.value;</span><br><span class="line">&#125;</span><br><span class="line">// 判断是否包含某个键</span><br><span class="line">boolean containsKey = hashMap.containsKey(&quot;banana&quot;); // true</span><br><span class="line"></span><br><span class="line">// 判断是否包含某个值</span><br><span class="line">boolean containsValue = hashMap.containsValue(3); // true</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>输出<br>跟<em>TreeMap</em>不同，该容器不保证元素顺序，根据需要该容器可能会对元素重新哈希，元素的顺序也会被重新打散，因此不同时间迭代同一个<em>HashMap</em>的顺序可能会不同。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(map);//直接输出</span><br><span class="line">Set&lt;String&gt; keys = map.keySet();</span><br><span class="line">        for (String key : keys) &#123;</span><br><span class="line">            System.out.print(key+&quot;  &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">//获得键集</span><br><span class="line">Collection&lt;String&gt; values = map.values();</span><br><span class="line">        for (String value : values) &#123;</span><br><span class="line">            System.out.print(value+&quot;  &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">//获得值集</span><br><span class="line">Set&lt;java.util.Map.Entry&lt;String, String&gt;&gt; entrys = map.entrySet();</span><br><span class="line">        for (java.util.Map.Entry&lt;String, String&gt; entry : entrys) &#123;</span><br><span class="line">            System.out.println(entry.getKey() + &quot;--&quot; + entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">//获得键值对集</span><br><span class="line">map.forEach((key, value) -&gt; &#123;</span><br><span class="line">    System.out.println(key + &quot; is &quot; + value + &quot; years old&quot;);</span><br><span class="line">&#125;);//获得键值对集</span><br></pre></td></tr></table></figure>
 <p>迭代器遍历：<br>HashMap 提供了 3 个迭代器：</p>
