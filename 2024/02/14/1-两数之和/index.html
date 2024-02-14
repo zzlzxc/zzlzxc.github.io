@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8" theme-name="Stellar" theme-version="1.26.8">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.1.1">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -16,16 +16,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>分类：Markdown - Paros的博客</title>
+  <title>1.两数之和 - Paros的博客</title>
 
   
-    <meta name="description" content="Paros的个人博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Paros的博客">
-<meta property="og:url" content="http://example.com/categories/Markdown/index.html">
+    <meta name="description" content="1.两数之和 暴力枚举最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下 1234567891011121314class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int []n&#x3D;new int [2];        for(int i&#x3D;0;i&lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.两数之和">
+<meta property="og:url" content="http://example.com/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="Paros的个人博客网站">
+<meta property="og:description" content="1.两数之和 暴力枚举最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下 1234567891011121314class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int []n&#x3D;new int [2];        for(int i&#x3D;0;i&lt;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-14T15:10:51.000Z">
+<meta property="article:modified_time" content="2024-02-14T17:04:22.321Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
   
@@ -43,11 +45,16 @@
   
 
   
+  
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/xaoxuu/favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/xaoxuu/favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/xaoxuu/favicon/favicon-16x16.png"><link rel="manifest" href="/assets/xaoxuu/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/xaoxuu/favicon/favicon.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" />
 </head>
 <body>
 
-<div class="l_body index tech" id="start" layout="undefined" ><aside class="l_left"><div class="sidebar-container">
+<div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
 
 
 <header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="/assets/icon.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><a class="title" href="/"><div class="main" ff="title">Paros的博客</div></a></div></header>
@@ -59,39 +66,65 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
+
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE"><span class="toc-text">暴力枚举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E8%A1%A8%E6%B3%95"><span class="toc-text">查找表法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></div></widget>
+
+
+
+
+
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="/assets/icon.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><a class="title" href="/"><div class="main" ff="title">Paros的博客</div></a></div></header>
-
- 
 
 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/categories">分类：Markdown</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/">
-<article class="md-text"><h2 class="post-title">Markdown简要教程</h2><div class="excerpt"><p>标题：一个#代表一级，一到六级如下
-h1h2h3h4h5h6高亮显示&gt;
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-14T15:10:51.000Z">2024-02-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T17:04:22.321Z">2024-02-15</time></span></div></div>
+</div>
 
-高亮
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>1.两数之和</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked">1.两数之和</a></p>
+<h2 id="暴力枚举"><a href="#暴力枚举" class="headerlink" title="暴力枚举"></a>暴力枚举</h2><p>最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int []n=new int [2];</span><br><span class="line">        for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">            for(int j=i+1;j&lt;nums.length;j++)</span><br><span class="line">                if(nums[i]+nums[j]==target)&#123;</span><br><span class="line">                    n[0]=i;</span><br><span class="line">                    n[1]=j;</span><br><span class="line">                    return n;</span><br><span class="line">                &#125;</span><br><span class="line">            return null;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 
-插入链接和图片[显示的文字](url)![图片](url)
-列表：无序列表：*或、+加空格如
+<h2 id="查找表法"><a href="#查找表法" class="headerlink" title="查找表法"></a>查找表法</h2><p>为了降低时间复杂度，牺牲一定的空间来记录一些信息以节省一层循环。<br>需要一个集合（查找表）来存放我们遍历过的元素，然后在遍历数组的时候去询问这个集合，某元素是否遍历过，也就是是否出现在这个集合。<br>查找表有两种常用的实现：</p>
+<ul>
+<li>哈希表（无序）</li>
+<li>平衡BST（有序）<br>这里不需要维护元素顺序，选用哈希的思想。（判断某个元素是否存在时，考虑哈希）<br>先看代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; ht = new HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        for (int i = 0; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            if (ht.containsKey(target - nums[i])) &#123;</span><br><span class="line">                return new int[]&#123;ht.get(target - nums[i]), i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            ht.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+只需遍历一遍数组，时间复杂度为O（n）<br>不仅要知道元素有没有遍历过，还要知道这个元素对应的下标。遍历数组时，若暂未发现满足条件的匹配值，就将该元素的值和下标的键值对放入哈希表中。元素为key，下标为value。<br>查找需要的元素是否存在于哈希表中。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>为什么会想到用哈希表？<br>：哈希表能够在常数时间内实现查找操作。通过将数组中的元素存储到哈希表中，然后在遍历的同时检查目标值减去当前元素的差是否在哈希表中存在只需线性复杂度。<br>哈希表为什么用map，map中的key和value用来存什么的？<br>：需要返回的值为下标，需要依据元素值来查找下标。</p>
 
-z
-x
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/02/15/HashMap/">HashMap</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/">Markdown简要教程</a></div></section></div>
 
 
-z
-x有序：数字加小数点加空格1.
 
 
-a
-b如果在单...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-02-14T14:43:14.000Z">2024-02-14</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>Markdown</span></span></div></article>
-</a></div>
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">paros tulchuloth</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
@@ -256,6 +289,12 @@ b如果在单...</p></div><div class="meta cap"><span class="cap" id="post-meta"
 <script src="/js/main.js?v=1.26.8" async></script>
 
 <!-- optional -->
+
+
+
+  
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
 
 
 
