@@ -16,18 +16,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>1.两数之和 - Paros的博客</title>
+  <title>49.字母异位词分组 - Paros的博客</title>
 
   
-    <meta name="description" content="1.两数之和 暴力枚举最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下 1234567891011121314class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int []n&#x3D;new int [2];        for(int i&#x3D;0;i&lt;">
+    <meta name="description" content="最初的想法先放代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950class Solution &#123;    public List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) &#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1.两数之和">
-<meta property="og:url" content="http://example.com/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
+<meta property="og:title" content="49.字母异位词分组">
+<meta property="og:url" content="http://example.com/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="1.两数之和 暴力枚举最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下 1234567891011121314class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int []n&#x3D;new int [2];        for(int i&#x3D;0;i&lt;">
+<meta property="og:description" content="最初的想法先放代码 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950class Solution &#123;    public List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) &#123;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-14T15:10:51.000Z">
-<meta property="article:modified_time" content="2024-02-14T17:04:22.321Z">
+<meta property="article:published_time" content="2024-02-15T16:54:08.000Z">
+<meta property="article:modified_time" content="2024-02-15T18:40:59.339Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
   
@@ -67,7 +67,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE"><span class="toc-text">暴力枚举</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E8%A1%A8%E6%B3%95"><span class="toc-text">查找表法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%88%9D%E7%9A%84%E6%83%B3%E6%B3%95"><span class="toc-text">最初的想法</span></a></li></ol></div></div></widget>
 
 
 
@@ -75,7 +75,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/"><span class="title">49.字母异位词分组</span></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title active" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/"><span class="title">49.字母异位词分组</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/13/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -89,28 +89,20 @@
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98/">力扣刷题</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-14T15:10:51.000Z">2024-02-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T17:04:22.321Z">2024-02-15</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-15T16:54:08.000Z">2024-02-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-15T18:40:59.339Z">2024-02-16</time></span></div></div>
 </div>
 
     
     <div class="bottom">
       <div class="text-area">
-        <h1 class="text title"><span>1.两数之和</span></h1>
+        <h1 class="text title"><span>49.字母异位词分组</span></h1>
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/?envType=study-plan-v2&envId=top-100-liked">1.两数之和</a></p>
-<h2 id="暴力枚举"><a href="#暴力枚举" class="headerlink" title="暴力枚举"></a>暴力枚举</h2><p>最容易想到的解法为双层循环遍历，求出每一种可能。时间复杂度为O(n^2),代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        int []n=new int [2];</span><br><span class="line">        for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">            for(int j=i+1;j&lt;nums.length;j++)</span><br><span class="line">                if(nums[i]+nums[j]==target)&#123;</span><br><span class="line">                    n[0]=i;</span><br><span class="line">                    n[1]=j;</span><br><span class="line">                    return n;</span><br><span class="line">                &#125;</span><br><span class="line">            return null;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h2 id="查找表法"><a href="#查找表法" class="headerlink" title="查找表法"></a>查找表法</h2><p>为了降低时间复杂度，牺牲一定的空间来记录一些信息以节省一层循环。<br>需要一个集合（查找表）来存放我们遍历过的元素，然后在遍历数组的时候去询问这个集合，某元素是否遍历过，也就是是否出现在这个集合。<br>查找表有两种常用的实现：</p>
-<ul>
-<li>哈希表（无序）</li>
-<li>平衡BST（有序）<br>这里不需要维护元素顺序，选用哈希的思想。（判断某个元素是否存在时，考虑哈希）<br>先看代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int[] twoSum(int[] nums, int target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; ht = new HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        for (int i = 0; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            if (ht.containsKey(target - nums[i])) &#123;</span><br><span class="line">                return new int[]&#123;ht.get(target - nums[i]), i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            ht.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-只需遍历一遍数组，时间复杂度为O（n）<br>不仅要知道元素有没有遍历过，还要知道这个元素对应的下标。遍历数组时，若暂未发现满足条件的匹配值，就将该元素的值和下标的键值对放入哈希表中。元素为key，下标为value。<br>查找需要的元素是否存在于哈希表中。</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>为什么会想到用哈希表？<br>：哈希表能够在常数时间内实现查找操作。通过将数组中的元素存储到哈希表中，然后在遍历的同时检查目标值减去当前元素的差是否在哈希表中存在只需线性复杂度。<br>哈希表为什么用map，map中的key和value用来存什么的？<br>：需要返回的值为下标，需要依据元素值来查找下标。</p>
+  </div><article class="md-text content"><h2 id="最初的想法"><a href="#最初的想法" class="headerlink" title="最初的想法"></a>最初的想法</h2><p>先放代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public List&lt;List&lt;String&gt;&gt; groupAnagrams(String[] strs) &#123;</span><br><span class="line">        int [] tag=new int[strs.length];</span><br><span class="line">        for(int i=0;i&lt;tag.length;i++)&#123;</span><br><span class="line">            tag[i]=0;</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;List&lt;String&gt;&gt; rr=new ArrayList&lt;List&lt;String&gt;&gt;();       </span><br><span class="line">        for(int j=0;j&lt;strs.length;j++)&#123;</span><br><span class="line">            if(tag[j]==0)&#123;    </span><br><span class="line">            HashMap&lt;Character,Integer&gt; m=new HashMap&lt;&gt;();</span><br><span class="line">            char[] a=strs[j].toCharArray();</span><br><span class="line">            int na=a.length;</span><br><span class="line">            List &lt;String&gt; e=new ArrayList&lt;&gt;();</span><br><span class="line">            e.add(strs[j]);</span><br><span class="line">            tag[j]=1;</span><br><span class="line">            for (char c : a) &#123;</span><br><span class="line">            m.put(c, m.getOrDefault(c, 0) + 1);</span><br><span class="line">        &#125;</span><br><span class="line">            int n=m.size();</span><br><span class="line">            for(int k=j+1;k&lt;strs.length;k++)&#123;</span><br><span class="line">                char[] b=strs[k].toCharArray();</span><br><span class="line">            if(tag[k]==0&amp;&amp;na==b.length)&#123;</span><br><span class="line">            HashMap&lt;Character,Integer&gt; m1=new HashMap&lt;&gt;();</span><br><span class="line">            for (char c : b) &#123;</span><br><span class="line">            m1.put(c, m1.getOrDefault(c, 0) + 1);</span><br><span class="line">            &#125;</span><br><span class="line">            if(areEqualMaps(m,m1))&#123;</span><br><span class="line">               e.add(strs[k]);</span><br><span class="line">               tag[k]=1;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            rr.add(e);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return rr;</span><br><span class="line">    &#125;</span><br><span class="line">     public boolean areEqualMaps(Map&lt;Character, Integer&gt; map1, Map&lt;Character, Integer&gt; map2) &#123;</span><br><span class="line">        if (map1.size() != map2.size()) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (Map.Entry&lt;Character, Integer&gt; entry : map1.entrySet()) &#123;</span><br><span class="line">            if (!map2.containsKey(entry.getKey()) || !map2.get(entry.getKey()).equals(entry.getValue())) &#123;</span><br><span class="line">                return false;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;      </span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过全部测试用例但超出时间限制。<br>主要思想为，先为字符串数组的每个元素做标记，保证大循环只需要遍历一次。<br>在大循环中，用一个HashMap记录该字符串中出现的字符和字符出现的频率。加入一个结果列表。<br>随后遍历剩余未记录进结果的字符串，也用HashMap记录该字符串中出现的字符和字符出现的频率，比较两个HashMap是否相等，若相等，则把字符串加入该结果列表中并记录为已读。<br>时间复杂度为n*m</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -120,7 +112,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/02/15/HashMap/">HashMap</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/">Markdown简要教程</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/15/HashMap/">HashMap</a></div></section></div>
 
 
 
