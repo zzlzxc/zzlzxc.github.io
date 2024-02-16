@@ -1,0 +1,317 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8" theme-name="Stellar" theme-version="1.26.8">
+  
+  <meta name="generator" content="Hexo 7.1.1">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Java 数据类型 - Paros的博客</title>
+
+  
+    <meta name="description" content="数据类型基本数据类型byte 8 整型量可用十进制、八进制或十六进制形式表示，以19开头的数为十进制，以0开头的数为八进制，以0x或0X开头的数为十六进制。short 16int 32long 64float 32double 64:浮点型常量在默认情况下是double类型的char 16:一个char表示一个Unicode字符，其值用16位无符号整数表示，范围为065535boolean 1 包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 数据类型">
+<meta property="og:url" content="http://example.com/2024/02/16/Java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Paros的博客">
+<meta property="og:description" content="数据类型基本数据类型byte 8 整型量可用十进制、八进制或十六进制形式表示，以19开头的数为十进制，以0开头的数为八进制，以0x或0X开头的数为十六进制。short 16int 32long 64float 32double 64:浮点型常量在默认情况下是double类型的char 16:一个char表示一个Unicode字符，其值用16位无符号整数表示，范围为065535boolean 1 包">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-16T15:11:30.000Z">
+<meta property="article:modified_time" content="2024-02-16T16:28:31.348Z">
+<meta property="article:author" content="paros tulchuloth">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.26.8">
+
+  
+    <link rel="shortcut icon" href="/myp.ico">
+  
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/180.ico"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/32.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/16.ico"><link rel="manifest" href="/assets/favicon/site.webmanifest"><link rel="shortcut icon" href="/assets/favicon/myp.ico"><meta name="theme-color" content="#f8f8f8"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" media="all" />
+</head>
+<body>
+
+<div class="l_body content tech" id="start" layout="post" ><aside class="l_left"><div class="sidebar-container">
+
+
+<header class="header"><div class="logo-wrap"><div class="icon"><img no-lazy class="icon" src="/assets/icon.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></div><a class="title" href="/"><div class="main" ff="title">Paros的博客</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-text">包装类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Integer%E3%80%81Byte%E3%80%81Short%E3%80%81Long"><span class="toc-text">Integer、Byte、Short、Long</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Float%E3%80%81Double"><span class="toc-text">Float、Double</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Character"><span class="toc-text">Character</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean"><span class="toc-text">Boolean</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E6%B1%A0"><span class="toc-text">缓存池</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">类型转换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9A%90%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-text">隐式类型转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%98%BE%E5%BC%8F%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%89"><span class="toc-text">显式类型转换（强制类型转换）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">包装类与字符串</span></a></li></ol></li></ol></li></ol></div></div></widget>
+
+
+
+
+
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/02/16/Java-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><span class="title">Java 数据类型</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a><a class="item title" href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/"><span class="title">49.字母异位词分组</span></a><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><span class="title">Java 面向对象</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    
+<div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-16T15:11:30.000Z">2024-02-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-16T16:28:31.348Z">2024-02-17</time></span></div></div>
+</div>
+
+    
+    <div class="bottom">
+      <div class="text-area">
+        <h1 class="text title"><span>Java 数据类型</span></h1>
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>byte 8 整型量可用十进制、八进制或十六进制形式表示，以1<del>9开头的数为十进制，以0开头的数为八进制，以0x或0X开头的数为十六进制。<br>short 16<br>int 32<br>long 64<br>float 32<br>double 64:浮点型常量在默认情况下是double类型的<br>char 16:一个char表示一个Unicode字符，其值用16位无符号整数表示，范围为0</del>65535<br>boolean 1</p>
+<h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h3><p>Bye<br>Short<br>Integer<br>Long<br>Float<br>Double<br>Character<br>Boolean<br>基本类型都有对应的包装类型，基本类型与其对应的包装类型之间的赋值使用自动装箱与拆箱完成。自动装箱是指将基数据类型值自动换为对应的包装类型对象。例如，将int的值赋给Integer类型的变量时会自动将int值转换为Integer对象。这样可以方便地将基本数据类型作为参数传递给需要对象类型的方法，或者存储集合类中。自动拆箱是指将包装类型对象自动转换为应的基本数据值。自动装箱和拆箱操作在编译阶段由编译器自动完成，使得代码加简洁易读。然而，在一些特殊情下，可能会发生装箱和拆箱的自动转换带来的性能损耗，因此在性能要求较高的场景中，建议显式地进行装箱和拆箱操作。如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int num = 10;</span><br><span class="line">Integer x = 2;     // 自动装箱</span><br><span class="line">Integer integer = new Integer(num);  // 手动装箱</span><br><span class="line">Integer integer = Integer.valueOf(num);  // 手动装箱</span><br><span class="line">Integer integer = 20;</span><br><span class="line">int num = integer.intValue();  // 手动拆箱</span><br><span class="line">int num = integer;  // 自动拆箱</span><br></pre></td></tr></table></figure>
+<p>基本数据类型与对象类型最大的不同点在于，基本数据类型是数值，对象类型是基于引用。Java分为堆内存和栈内存，Java对象都在堆内存中存储。基本类型的变量在栈中直接存储的具体数值，对象类型的变量存储的是该对象在堆中地址的引用。</p>
+<h4 id="Integer、Byte、Short、Long"><a href="#Integer、Byte、Short、Long" class="headerlink" title="Integer、Byte、Short、Long"></a>Integer、Byte、Short、Long</h4><p>Integer类包含以下4个常量：<br>MAX_VALUE：是一个常量值，代表基本类型能够表示的最大值；<br>MIN_VALUE：是一个常量值，代表基本类型能够表示的最小值；<br>SIZE：以二进制补码的形式，表示 int值的比特位数；<br>TYPE：代表基本类型 int 的 Class 实例对象。<br>方法：<br>byteValue()	 返回byte	     转换为byte类型<br>shortValue()		         转换为short类型<br>intValue()	                 转换为int类型<br>toString()		             转换为String类型<br>.toBinaryString(num)        将数字转换成二进制字符串<br>.toHexString(num)           将数字转换成八进制<br>.toOctalString(num)        将数字转换成十六进制<br>equals(Object obj)	boolean	比较此对象与指定对象是否相等<br>compareTo(Integer another)	比较两个对象的数值大小，如相等，则返回 0；如调用对象的数值小于 another，则返回负int值；如调用对象的数值大于 another，则返回正int值<br>valueOf(String s)	    	将String类型的数值转为 Integer对象<br>parseInt(String s)	    	将String字符串转为 int 数值<br>parseByte<br>parseShort()</p>
+<h4 id="Float、Double"><a href="#Float、Double" class="headerlink" title="Float、Double"></a>Float、Double</h4><p>MAX_VALUE：表示float的最大值；<br>MIN_VALUE：表示float的最小值；<br>MAX_EXPONENT：float变量可能具有的最大指数；<br>MIN_EXPONENT：float变量可能具有的最小指数；<br>MIN_NORMAL：保存float类型值的最小标准值常量；最小正规范值<br>NaN：保存float类型的非数值常量；表示不是一个数字（Not-a-Number）。<br>SIZE：以二进制补码形式表示的float值的比特位数；<br>TYPE：表示float类型的Class对象实例。<br>POSITIVE_INFINITY：表示正无穷大。<br>NEGATIVE_INFINITY：表示负无穷大。</p>
+<p>方法：<br>byteValue()		转为byte类型<br>doubleValue()		转为double类型<br>floatValue()		转为float类型<br>intValue()		强制转换为int类型<br>longValue()		强制转换为long类型<br>shortValue()		强制转换为short类型<br>isNaN()		判断该值是否为非数字值，如果是则返回true，否则返回false<br>isNaN(float v)		如果指定的参数是一个非数字值，则返回 true，否则返回 false<br>toString()		将Float值转为 String对象<br>valueOf(String s)		将String转为Float对象<br>parseFloat(String s)		将String转为float数值<br>parseDouble</p>
+<h4 id="Character"><a href="#Character" class="headerlink" title="Character"></a>Character</h4><p>void Character(char value)	构造一个新的Character对象，表示指定的char值<br>char charValue()	返回该Character对象的值<br>int compareTo(Character anotherCharacter)	比较两个Character对象的大小<br>boolean equals(Character anotherCharacter)	将该对象与指定对象比较，当且仅当参数不是null，且此对象与该Character对象相同时，结果为true<br>boolean isDigit(char ch)	判断指定字符是否为数字<br>boolean isLetter(int codePoint)	判断指定的字符是否为字母<br>boolean isLetterOrDigit(int codePoint)	判断指定的字符是否为字母或数字<br>boolean isLowerCase(char ch)	判断指定的字符是否为小写字母<br>boolean isUpperCase(char ch)	判断指定的字符是否为大写字母<br>char toLowerCase(char ch)	将指定的字符参数转为小写<br>char toUpperCase(char ch)	将指定的字符参数转为大写</p>
+<h4 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h4><p>TRUE：代表值为true的常量；<br>FALSE：代表值为false的常量；<br>TYPE：表示boolean类型的Class实例对象。<br>booleanValue()		转为boolean类型<br>equals(Object obj)	判断调用该方法的对象与obj是否相等。当参数不是null，且与调用该方法的对象相同时则返回true<br>parseBoolean(String s)		将String字符串参数转为 boolean值<br>toString()		返回表示该boolean值的String字符串<br>valueOf(String s)		将指定的字符串转为boolean值</p>
+<h3 id="缓存池"><a href="#缓存池" class="headerlink" title="缓存池"></a>缓存池</h3><p>new Integer(123) 与 Integer.valueOf(123) 的区别在于:<br>new Integer(123) 每次都会新建一个对象。Integer.valueOf(123) 会使用缓存池中的对象，多次调用会取得同一个对象的引用。如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Integer x = new Integer(123);</span><br><span class="line">Integer y = new Integer(123);</span><br><span class="line">System.out.println(x == y);    // false</span><br><span class="line">Integer z = Integer.valueOf(123);</span><br><span class="line">Integer k = Integer.valueOf(123);</span><br><span class="line">System.out.println(z == k);   // true</span><br></pre></td></tr></table></figure>
+<p>在Java中，有一种对象缓存机制被称为缓存池（Cache Pool），它用于提高性能和节省内存空间。缓存池是一种存储和重用已经创建的对象的技术，以避免频繁地创建新对象。Boolean、Byte、Character、Short、Integer、Long这些包装类型的对象，以及字符串类型的对象，都有其对应的缓存池。在Java的自动装箱过程中，如果一个值处于缓存池的范围内，那么不会创建新的对象，而是从缓存池中取已经存在的对象。这样可以减少内存占用，提高效率。缓存池的范围以及具体实现方式在不同的Java版本或不同的虚拟机实现中可能会有所不同。valueOf() 方法的实现比较简单，就是先判断值是否在缓存池中，如果在的话就直接返回缓存池的内容。可以手动使用valueOf()来确保对象来自缓存池。编译器会在缓冲池范围内的基本类型自动装箱过程调用 valueOf() 方法，因此多个 Integer 实例使用自动装箱来创建并且值相同，那么就会引用相同的对象。<br>在 Java 8 中，Integer 缓存池的大小默认为 -128~127。<br>boolean values true and false<br>all byte values<br>short values between -128 and 127<br>int values between -128 and 127<br>char in the range \u0000 to \u007F<br>在使用这些基本类型对应的包装类型时，就可以直接使用缓冲池中的对象。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><h4 id="隐式类型转换"><a href="#隐式类型转换" class="headerlink" title="隐式类型转换"></a>隐式类型转换</h4><p>隐式类型转换是指在编译过程中由编译器自动完成的类型转换，它发生在目标类型的范围大于原始的情况下。例如，将一个小范围的整数类型转换为一个大范围的整数类型，或将一个整数类型转换为浮点数类型。</p>
+<h4 id="显式类型转换（强制类型转换）"><a href="#显式类型转换（强制类型转换）" class="headerlink" title="显式类型转换（强制类型转换）"></a>显式类型转换（强制类型转换）</h4><p>显式类型转换是指通过强制转换运算符（类型名）将一个较大范围的数据类型转换为较小范围的数据类型。在进行显式类型转换时，需要注意目标类型的范围是否可以接受原始类型的值，避免数据精度丢失或溢出的问题。<br>引用类型的强制类型转换主要是指将一个父类类型的引用转换为一个子类类型的引用。这种类型转换被称为向下转型（Downcasting）。当你确信一个对象的实际类型是某个子类，并且你使用这个子的特定方法或属性时，可以使用强制类型转换。在进行强制转换之前，最好先通过使用instanceof运算符来检查要转换的引用是目标类型的实例。只有当引用实际上引用了目标类型的对象时，才能安全地进行强制转换。否则，将会引发CastException异常。</p>
+<h4 id="包装类与字符串"><a href="#包装类与字符串" class="headerlink" title="包装类与字符串"></a>包装类与字符串</h4><p>Byte、Short、Integer、Long、Float、Double这六个类，有一个共同的父类Number。其中，Number提供了一组xxxValue()方法，可以用于将某种类型转换成其他的类型。<br>字符串到其他基本数据类型的转：可以通过包装类（如Integer、Double等）提供的parseXxx()方法将字符串换为对应的基本数据类型。<br>其他类型到字符串的转换：可以使用基本数据类型的toString()方法。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">Java 面向对象</a></div></section></div>
+
+<div class="related-wrap" id="related-posts">
+    <section class='header'>
+      <div class='title cap theme'>您可能感兴趣的文章</div>
+    </section>
+    <section class='body'>
+    <div class="related-posts"><a class="item" href="\2024\02\15\HashMap\" title="HashMap"><span class="title">HashMap</span></a></div></section></div>
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">paros tulchuloth</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8">Stellar 1.26.8</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+<div class="main-mask" onclick="sidebar.toggle()"></div></div></div><div class="scripts">
+<script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.26.8';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.26.8';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js","memos":"/js/plugins/memos.js","marked":"/js/plugins/marked.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js","transition":"fade"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@10.3/swiper-bundle.min.css","js":"https://unpkg.com/swiper@10.3/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js","distance":"16px","duration":800,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","flying_pages":"https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js","css":"https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css","selector":null});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied","toast":"复制成功"});
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.26.8" async></script>
+
+<!-- optional -->
+
+
+
+  
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+<!-- inject -->
+
+</div></body></html>
