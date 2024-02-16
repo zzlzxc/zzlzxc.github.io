@@ -16,18 +16,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Markdown简要教程 - Paros的博客</title>
+  <title>Java 面向对象 - Paros的博客</title>
 
   
-    <meta name="description" content="标题：一个#代表一级，一到六级如下 h1h2h3h4h5h6高亮显示&gt;  高亮  插入链接和图片[显示的文字](url)![图片](url) 列表：无序列表：*或、+加空格如  z x   z x有序：数字加小数点加空格1.   a b如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格。记住一个原则，如果在和列表配合使用的时候出现了问题，就缩进一次，四个空">
+    <meta name="description" content="三大特性封装将数据和行为（基于数据的操作）封装在一起。分离对外接口与内部实现。用户无需知道对象内部的细节，只能通过对象对外提供的接口来访问该对象。其优点为：减少耦合: 可以独立地开发、测试、优化、使用、理解和修改减轻维护的负担: 可以更容易被程序员理解，并且在调试的时候可以不影响其他模块有效地调节性能: 可以通过剖析确定哪些模块影响了系统的性能提高软件的可重用性降低风险: 即使整个系统不可用，但是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown简要教程">
-<meta property="og:url" content="http://example.com/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="Java 面向对象">
+<meta property="og:url" content="http://example.com/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="标题：一个#代表一级，一到六级如下 h1h2h3h4h5h6高亮显示&gt;  高亮  插入链接和图片[显示的文字](url)![图片](url) 列表：无序列表：*或、+加空格如  z x   z x有序：数字加小数点加空格1.   a b如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格。记住一个原则，如果在和列表配合使用的时候出现了问题，就缩进一次，四个空">
+<meta property="og:description" content="三大特性封装将数据和行为（基于数据的操作）封装在一起。分离对外接口与内部实现。用户无需知道对象内部的细节，只能通过对象对外提供的接口来访问该对象。其优点为：减少耦合: 可以独立地开发、测试、优化、使用、理解和修改减轻维护的负担: 可以更容易被程序员理解，并且在调试的时候可以不影响其他模块有效地调节性能: 可以通过剖析确定哪些模块影响了系统的性能提高软件的可重用性降低风险: 即使整个系统不可用，但是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-14T14:43:14.000Z">
-<meta property="article:modified_time" content="2024-02-14T15:44:51.010Z">
+<meta property="article:published_time" content="2024-02-16T08:59:38.000Z">
+<meta property="article:modified_time" content="2024-02-16T09:55:09.576Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
   
@@ -69,7 +69,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#h2"><span class="toc-text">h2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#h3"><span class="toc-text">h3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#h4"><span class="toc-text">h4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#h5"><span class="toc-text">h5</span></a></li></ol></li></ol></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-text">三大特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-text">封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-text">多态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="toc-text">面向对象的设计原则</span></a></li></ol></div></div></widget>
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><span class="title">Java 面向对象</span></a><a class="item title" href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/"><span class="title">49.字母异位词分组</span></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title active" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><span class="title">Java 面向对象</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/"><span class="title">49.字母异位词分组</span></a><a class="item title" href="/2024/02/15/HashMap/"><span class="title">HashMap</span></a><a class="item title" href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"><span class="title">1.两数之和</span></a><a class="item title" href="/2024/02/14/Markdown%E7%AE%80%E8%A6%81%E6%95%99%E7%A8%8B/"><span class="title">Markdown简要教程</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -90,37 +90,39 @@
   <div class="content">
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Markdown/">Markdown</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-14T14:43:14.000Z">2024-02-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-14T15:44:51.010Z">2024-02-14</time></span></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-16T08:59:38.000Z">2024-02-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-16T09:55:09.576Z">2024-02-16</time></span></div></div>
 </div>
 
     
     <div class="bottom">
       <div class="text-area">
-        <h1 class="text title"><span>Markdown简要教程</span></h1>
+        <h1 class="text title"><span>Java 面向对象</span></h1>
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>标题：<br>一个#代表一级，一到六级如下</p>
-<h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><h6 id="h6"><a href="#h6" class="headerlink" title="h6"></a>h6</h6><p>高亮显示&gt;</p>
-<blockquote>
-<p>高亮</p>
-</blockquote>
-<p>插入链接和图片<br>[显示的文字](url)<br>![图片](url)</p>
-<p>列表：<br>无序列表：*或、+加空格<br>如</p>
-<ul>
-<li>z</li>
-<li>x</li>
-</ul>
-<ul>
-<li>z</li>
-<li>x<br>有序：数字加小数点加空格1.</li>
-</ul>
-<ol>
-<li>a</li>
-<li>b<br>如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格。记住一个原则，如果在和列表配合使用的时候出现了问题，就缩进一次，四个空格或者一个制表符代表一次缩进。如果一次缩进没有解决问题，那就两次。<br><em>斜体</em> 用*包围<br><strong>加粗</strong> 用**包围<br><code>代码块</code>用`包围<br>使用反斜杠\插入语法中用到的特殊符号：<br>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</li>
-</ol>
+  </div><article class="md-text content"><h2 id="三大特性"><a href="#三大特性" class="headerlink" title="三大特性"></a>三大特性</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>将数据和行为（基于数据的操作）封装在一起。分离对外接口与内部实现。用户无需知道对象内部的细节，只能通过对象对外提供的接口来访问该对象。<br>其优点为：<br>减少耦合: 可以独立地开发、测试、优化、使用、理解和修改<br>减轻维护的负担: 可以更容易被程序员理解，并且在调试的时候可以不影响其他模块<br>有效地调节性能: 可以通过剖析确定哪些模块影响了系统的性能提高软件的可重用性<br>降低风险: 即使整个系统不可用，但是这些独立的模块却有可能是可用的</p>
+<p><strong>单一职责原则SRP</strong>：一个对象应该只包含单一的职责，并且该职责被完整地封装在一个类中。<br>就一个类而言，应该仅有一个引起它变化的原因：不会因为需要修改其他公用的方法而需要修改该类。将不同的变化原因封装在不同的类中，若多个职责总是同时发生改变则封装在同一类中。以避免修改了一个功能而影响到其他的功能。</p>
+<p><strong>模块化</strong>：模块即为代码片段。模块化是关于如何将软件程序分解为不同模块的思想。衡量标准为高内聚低耦合。使各个模块的变更和复用能在不影响其他模块的情况下进行。</p>
+<p><strong>信息隐藏</strong>：隐藏模块的实现细节。暴露接口。接口和实现共同体现了模块的职责。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>“是”的关系。<br>这里需要介绍部分类之间的关系。<br><strong>泛化</strong>：即为继承。extends。<br><strong>实现</strong>：用来实现一个接口，与继承类似。implements。<br><strong>关联</strong>：表明对象之间有联系。在代码实现时，通常将一个类的对象作为另一个类的成员变量。分为单向，双向，自关联，多重关联，组合，聚合等类型。<br><strong>聚合</strong>：表示整体由部分组成，但是整体和部分不是强依赖的，整体不存在了部分还是会存在。如车和车轮。代码实现时，在关联的基础上，后者常作为构造方法、set方法或其他方法的参数注入到前者中。<br><strong>组合</strong>：和聚合不同，组合中整体和部分是强依赖的，整体不存在了部分也不存在了。比如公司和部门，公司没了部门就不存在了。代码实现时，在关联的基础上，通常在整体类的构造方法中直接实例化（new）成员类。<br><strong>依赖</strong>：一种使用关系。和关联关系不同的是，依赖关系是在运行过程中起作用的。A 类和 B 类是依赖关系主要有以下的形式:<br>A 类是 B 类中的(某中方法的)局部变量；<br>A 类是 B 类方法当中的一个参数；<br>A 类的方法中调用了B 类的静态方法。<br>A 类向 B 类发送消息，从而影响 B 类发生变化；</p>
+<p><strong>里氏替换原则LSP</strong>：所有引用基类的地方必须能透明地使用其子类的对象。父类设计为抽象类或接口，子类继承父类，在运行时用子类实例替换父类实例，增加新的功能可以通过增加一个新的子类来实现。在类中注入子类对象即可使用子类所扩展的方法。使用基类类型来对对象进行定义，而在运行时再确定其子类类型，用子类对象来替换父类对象。使用继承时必须要严格遵循LSP。</p>
+<p><strong>合成复用原则CRP</strong>：优先使用对象组合，而不是通过继承来达到复用的目的。</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态分为编译时多态和运行时多态:</p>
+<pre><code>编译时多态主要指方法的重载
+运行时多态指程序中定义的对象引用所指向的具体类型在运行期间才确定，如上述编译时使用的是父类的类型，而运行时使用的是子类的类型。
+</code></pre>
+<p>运行时多态有三个条件:</p>
+<pre><code>继承
+覆盖(重写)：子类可以重写父类的方法，即子类可以根据自身的需求重写父类的方法实现，从而实现不同的行为。
+向上转型
+</code></pre>
+<h2 id="面向对象的设计原则"><a href="#面向对象的设计原则" class="headerlink" title="面向对象的设计原则"></a>面向对象的设计原则</h2><p>最后简单介绍尚未提及的其他面向对象原则：</p>
+<p><strong>迪米特法则Lod</strong>：每一个软件单位对其他单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。通俗些说，只与你的直接朋友通信。朋友指：当前对象本身this、以参数形式传入方法中的对象、成员对象、所在集合中的元素、所创建的对象。其思想为多引入中间类以减少耦合。</p>
+<p><strong>开闭原则OCP</strong>：<br><strong>软件实体应当对扩展开放，对修改关闭</strong><br>追求在不修改原有代码的情况下进行扩展，添加而不是修改。<br>实现方法：抽象</p>
+<p><strong>依赖倒转原则DIP</strong>：<br>是实现ocp的手段之一。<br><strong>高层模块不应该依赖低层模块，它们都应该依赖抽象。抽象不应依赖与细节，细节应该依赖于抽象。</strong><br>针对接口&#x2F;抽象层编程。把具体类写在配置文件中。扩展抽象层，修改配置文件。<br>使用接口和抽象类进行变量类型声明、参数类型声明、方法返回类型声明以及数据类型的转换等，而不要用具体类来做这些事情。将具体类的对象通过依赖注入的方式注入到其他对象中。包括构造注入，设值注入和接口注入。这些方法在定义时使用的是抽象类型，在运行时再传入具体类型的对象，由子类对象（具体）来覆盖父类对象（抽象）。</p>
+<p><strong>接口隔离原则ISP</strong>：<br>客户端不应该依赖那些它不需要的接口。提供尽可能小的接口，而不要提供大的总接口。接口中的方法应该尽量少。否则在不同的实现类中都不得不实现接口中定义的所有方法。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -130,14 +132,9 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/02/14/1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">1.两数之和</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/16/49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84/">49.字母异位词分组</a></div></section></div>
 
-<div class="related-wrap" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="\2024\02\16\49-字母异位词分组\" title="49.字母异位词分组"><span class="title">49.字母异位词分组</span></a></div></section></div>
+<div class="related-wrap" id="related-posts"></div>
 
 
 
