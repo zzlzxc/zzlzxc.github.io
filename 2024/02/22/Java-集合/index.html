@@ -16,18 +16,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Java 集合 - Paros的博客</title>
+  <title>Java Collection - Paros的博客</title>
 
   
-    <meta name="description" content="集合类体系结构 Collection   List Set   Map   HashMap TreeMap">
+    <meta name="description" content="集合类体系结构 Collection   List（可重复） Set（不可重复）   Map集合只能存储引用数据类型  Collectionboolean add​(E e) 确保此集合包含指定的元素（可选操作）。boolean addAll​(Collection c\) 将指定集合中的所有元素添加到此集合（可选操作）。   void clear​\(\) 从此集合中删除所有元素（可选操作）。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 集合">
+<meta property="og:title" content="Java Collection">
 <meta property="og:url" content="http://example.com/2024/02/22/Java-%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="集合类体系结构 Collection   List Set   Map   HashMap TreeMap">
+<meta property="og:description" content="集合类体系结构 Collection   List（可重复） Set（不可重复）   Map集合只能存储引用数据类型  Collectionboolean add​(E e) 确保此集合包含指定的元素（可选操作）。boolean addAll​(Collection c\) 将指定集合中的所有元素添加到此集合（可选操作）。   void clear​\(\) 从此集合中删除所有元素（可选操作）。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-22T07:32:54.000Z">
-<meta property="article:modified_time" content="2024-02-22T07:36:00.056Z">
+<meta property="article:modified_time" content="2024-02-28T13:37:29.601Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
   
@@ -69,7 +69,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">集合类体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">集合类体系结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Collection"><span class="toc-text">Collection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterator"><span class="toc-text">Iterator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF"><span class="toc-text">增强for循环</span></a></li></ol></div></div></widget>
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/16/Java-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"><span class="title">Java 面向对象</span></a><a class="item title" href="/2024/02/17/Java-%E5%85%B6%E4%BB%96%E9%83%A8%E5%88%86%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/"><span class="title">Java 其他部分基础知识点</span></a><a class="item title" href="/2024/02/22/Git/"><span class="title">Git</span></a><a class="item title active" href="/2024/02/22/Java-%E9%9B%86%E5%90%88/"><span class="title">Java 集合</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/22/Java-ArrayList/"><span class="title">Java ArrayList</span></a><a class="item title" href="/2024/02/17/Java-%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">Java 字符串</span></a><a class="item title" href="/2024/02/19/Java-IDEA/"><span class="title">Java IDEA</span></a><a class="item title" href="/2024/02/20/Java-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/"><span class="title">Java 垃圾回收机制</span></a><a class="item title" href="/2024/02/20/Java%20%E6%95%B0%E7%BB%84/"><span class="title">Java 数组</span></a><a class="item title" href="/2024/02/17/Java-%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B/"><span class="title">Java 控制程序流程</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/02/22/Java-ArrayList/"><span class="title">Java ArrayList</span></a><a class="item title" href="/2024/02/28/Java-TreeSet/"><span class="title">Java TreeSet</span></a><a class="item title" href="/2024/02/28/Java-HashSet/"><span class="title">Java HashSet</span></a><a class="item title" href="/2024/02/28/Java-TreeMap/"><span class="title">Java TreeMap</span></a><a class="item title" href="/2024/02/28/Java-%E6%B3%9B%E5%9E%8B/"><span class="title">Java 泛型</span></a><a class="item title" href="/2024/02/28/Java-LinkedList/"><span class="title">Java LinkedList</span></a><a class="item title active" href="/2024/02/22/Java-%E9%9B%86%E5%90%88/"><span class="title">Java Collection</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/19/Java-IDEA/"><span class="title">Java IDEA</span></a><a class="item title" href="/2024/02/28/Java-API/"><span class="title">Java API</span></a><a class="item title" href="/2024/02/28/Java-%E5%BC%82%E5%B8%B8/"><span class="title">Java 异常</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -91,13 +91,13 @@
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-22T07:32:54.000Z">2024-02-22</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-22T07:36:00.056Z">2024-02-22</time></span></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-22T07:32:54.000Z">2024-02-22</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-28T13:37:29.601Z">2024-02-28</time></span></div></div>
 </div>
 
     
     <div class="bottom">
       <div class="text-area">
-        <h1 class="text title"><span>Java 集合</span></h1>
+        <h1 class="text title"><span>Java Collection</span></h1>
       </div>
     </div>
     
@@ -106,17 +106,24 @@
 <li>Collection</li>
 </ul>
 <ul>
-<li>List</li>
-<li>Set</li>
+<li>List（可重复）</li>
+<li>Set（不可重复）</li>
 </ul>
 <ul>
-<li>Map</li>
+<li>Map<br>集合只能存储引用数据类型</li>
 </ul>
-<ul>
-<li>HashMap</li>
-<li>TreeMap</li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><p>boolean add​(E e) 确保此集合包含指定的元素（可选操作）。<br>boolean addAll​(Collection<? extends E> c\) 将指定集合中的所有元素添加到此集合（可选操作）。  
+void clear​\(\) 从此集合中删除所有元素（可选操作）。  
+boolean contains​\(Object o\) 如果此集合包含指定的元素，则返回 true 。  
+boolean containsAll​\(Collection<?> c) 如果此集合包含指定集合中的所有元素，则返回 true 。<br>boolean equals​(Object o) 将指定的对象与此集合进行比较以获得相等性。<br>int hashCode​() 返回此集合的哈希码值。<br>boolean isEmpty​() 如果此集合不包含元素，则返回 true 。<br>Iterator<E> iterator​() 返回此集合中元素的迭代器。  默认指向0索引<br>default Stream<E> parallelStream​() 返回可能并行的 Stream与此集合作为其来源。<br>boolean remove​(Object o) 从该集合中删除指定元素的单个实例（如果存在）（可选操作）。<br>boolean removeAll​(Collection<?> c\) 删除指定集合中包含的所有此集合的元素（可选操作）。  
+default boolean removeIf​\(Predicate<? super E> filter\) 删除满足给定谓词的此集合的所有元素。参数可以设置为Lambda表达式  
+boolean retainAll​\(Collection<?> c) 仅保留此集合中包含在指定集合中的元素（可选操作）。<br>int size​() 返回此集合中的元素数。<br>default Spliterator<E> spliterator​() 在此集合中的元素上创建一个Spliterator 。<br>default Stream<E> stream​() 返回一个序列 Stream与此集合作为其来源。<br>Object[] toArray​() 返回一个包含此集合中所有元素的数组。<br><T> T[] toArray​(T[] a) 返回一个包含此集合中所有元素的数组; 返回的数组的运行时类型是指定数组的运行时类型。  </p>
+<h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><p>default void forEachRemaining​(Consumer&lt;? super E&gt; action) 对每个剩余元素执行给定的操作，直到所有元素都被处理或动作引发异常。<br>boolean hasNext​() 如果迭代具有更多元素，则返回 true 。<br>E next​() 返回迭代中的下一个元素。取出迭代器指向的元素，后移一个位置<br>default void remove() 从底层集合中删除此迭代器返回的最后一个元素（可选操作）。  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while(it.hasNext())&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h3><p>底层为迭代器<br>修改第三方变量的值不会影响集合的值。</p>
+<p>需要操作索引就使用普通for<br>需要在遍历中删除元素使用迭代器<br>仅需遍历就使用增强for</p>
+
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
