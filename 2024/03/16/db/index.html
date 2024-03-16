@@ -16,20 +16,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Java 数组 - Paros的博客</title>
+  <title>db - Paros的博客</title>
 
   
-    <meta name="description" content="数组一种存储同种数据类型的多个值的容器。数组类型的变量记录的是地址值 定义格式int [] t&#x3D;new int[长度];&#x2F;&#x2F;动态初始化int [] t&#x3D;new int[]{1,2,3};&#x2F;&#x2F;静态初始化int [] t&#x3D;{1,2,3}; 索引和访问 索引越界 空指针异常长度：a.length；  二维数组存储一维数组容器的容器 定">
+    <meta name="description" content="数据：数据库中存储的基本对象，是描述事物的符号记录。 数据的含义称为语义，数据与其语义是不可分的。 数据库是长期储存在计算机内、有组织的、可共享的大量数据的集合。 数据库系统的构成：数据库、数据库管理系统（DBMS，及其应用开发工具），应用程序，数据库管理员（DBA）。 数据管理方式 数据模型 概念模型 逻辑模型 物理模型  概念模型用于数据库设计， 用 E-R 图来描述现实世界的概念模型。 概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 数组">
-<meta property="og:url" content="http://example.com/2024/02/20/Java%20%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="db">
+<meta property="og:url" content="http://example.com/2024/03/16/db/index.html">
 <meta property="og:site_name" content="Paros的博客">
-<meta property="og:description" content="数组一种存储同种数据类型的多个值的容器。数组类型的变量记录的是地址值 定义格式int [] t&#x3D;new int[长度];&#x2F;&#x2F;动态初始化int [] t&#x3D;new int[]{1,2,3};&#x2F;&#x2F;静态初始化int [] t&#x3D;{1,2,3}; 索引和访问 索引越界 空指针异常长度：a.length；  二维数组存储一维数组容器的容器 定">
+<meta property="og:description" content="数据：数据库中存储的基本对象，是描述事物的符号记录。 数据的含义称为语义，数据与其语义是不可分的。 数据库是长期储存在计算机内、有组织的、可共享的大量数据的集合。 数据库系统的构成：数据库、数据库管理系统（DBMS，及其应用开发工具），应用程序，数据库管理员（DBA）。 数据管理方式 数据模型 概念模型 逻辑模型 物理模型  概念模型用于数据库设计， 用 E-R 图来描述现实世界的概念模型。 概念">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-19T16:01:49.000Z">
-<meta property="article:modified_time" content="2024-02-20T13:54:30.741Z">
+<meta property="og:image" content="http://example.com/_resources/1bc830a1dc2dec5d2feefff8ce6184a2">
+<meta property="og:image" content="http://example.com/_resources/777c2d6151d3592a61e5d36ca8bd228c">
+<meta property="og:image" content="http://example.com/_resources/d2761014e38feb0066836f9bbf96df26">
+<meta property="og:image" content="http://example.com/_resources/8abfa4927a52a31392df20df73dc5632">
+<meta property="article:published_time" content="2024-03-16T06:56:48.000Z">
+<meta property="article:modified_time" content="2024-03-16T06:59:08.747Z">
 <meta property="article:author" content="paros tulchuloth">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/_resources/1bc830a1dc2dec5d2feefff8ce6184a2">
   
   
   
@@ -69,7 +74,7 @@
 </div>
 <div class="widgets">
 
-<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-text">定义格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%92%8C%E8%AE%BF%E9%97%AE"><span class="toc-text">索引和访问</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-text">二维数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F-1"><span class="toc-text">定义格式</span></a></li></ol></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F"><span class="toc-text">数据管理方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="toc-text">数据模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="toc-text">概念模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B"><span class="toc-text">逻辑模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">关系模型的数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-text">关系模式的优缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NoSQL"><span class="toc-text">NoSQL</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">数据库系统的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">数据库系统的组成</span></a></li></ol></div></div></widget>
 
 
 
@@ -77,7 +82,7 @@
 
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/03/16/db/"><span class="title">db</span></a><a class="item title" href="/2024/02/28/Java-TreeMap/"><span class="title">Java TreeMap</span></a><a class="item title" href="/2024/02/29/Java-Stream%E6%B5%81/"><span class="title">Java Stream��</span></a><a class="item title" href="/2024/02/17/Java-%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">Java 字符串</span></a><a class="item title" href="/2024/02/28/Java-%E6%B3%9B%E5%9E%8B/"><span class="title">Java 泛型</span></a><a class="item title" href="/2024/02/28/Java-HashSet/"><span class="title">Java HashSet</span></a><a class="item title" href="/2024/02/28/Java-TreeSet/"><span class="title">Java TreeSet</span></a><a class="item title" href="/2024/02/22/Java-ArrayList/"><span class="title">Java ArrayList</span></a><a class="item title" href="/2024/02/28/Java-LinkedList/"><span class="title">Java LinkedList</span></a><a class="item title" href="/2024/02/22/Java-%E9%9B%86%E5%90%88/"><span class="title">Java Collection</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title active" href="/2024/03/16/db/"><span class="title">db</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item title" href="/2024/02/28/Java-TreeMap/"><span class="title">Java TreeMap</span></a><a class="item title" href="/2024/02/29/Java-Stream%E6%B5%81/"><span class="title">Java Stream��</span></a><a class="item title" href="/2024/02/17/Java-%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">Java 字符串</span></a><a class="item title" href="/2024/02/28/Java-%E6%B3%9B%E5%9E%8B/"><span class="title">Java 泛型</span></a><a class="item title" href="/2024/02/28/Java-HashSet/"><span class="title">Java HashSet</span></a><a class="item title" href="/2024/02/28/Java-TreeSet/"><span class="title">Java TreeSet</span></a><a class="item title" href="/2024/02/22/Java-ArrayList/"><span class="title">Java ArrayList</span></a><a class="item title" href="/2024/02/28/Java-LinkedList/"><span class="title">Java LinkedList</span></a><a class="item title" href="/2024/02/22/Java-%E9%9B%86%E5%90%88/"><span class="title">Java Collection</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -90,26 +95,81 @@
   <div class="content">
     
 <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Java/">Java</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-02-19T16:01:49.000Z">2024-02-20</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-02-20T13:54:30.741Z">2024-02-20</time></span></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-03-16T06:56:48.000Z">2024-03-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-03-16T06:59:08.747Z">2024-03-16</time></span></div></div>
 </div>
 
     
     <div class="bottom">
       <div class="text-area">
-        <h1 class="text title"><span>Java 数组</span></h1>
+        <h1 class="text title"><span>db</span></h1>
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>一种存储同种数据类型的多个值的容器。<br>数组类型的变量记录的是地址值</p>
-<h3 id="定义格式"><a href="#定义格式" class="headerlink" title="定义格式"></a>定义格式</h3><p>int [] t&#x3D;new int[长度];&#x2F;&#x2F;动态初始化<br>int [] t&#x3D;new int[]{1,2,3};&#x2F;&#x2F;静态初始化<br>int [] t&#x3D;{1,2,3};</p>
-<h3 id="索引和访问"><a href="#索引和访问" class="headerlink" title="索引和访问"></a>索引和访问</h3><ul>
-<li>索引越界</li>
-<li>空指针异常<br>长度：a.length；</li>
+  </div><article class="md-text content"><p>数据：数据库中存储的基本对象，是描述事物的符号记录。</p>
+<p><strong>数据的含义称为语义</strong>，数据与其语义是不可分的。</p>
+<p><strong>数据库是长期储存在计算机内、有组织的、可共享的大量数据的集合。</strong></p>
+<p>数据库系统的构成：数据库、数据库管理系统（DBMS，及其应用开发工具），应用程序，数据库管理员（DBA）。</p>
+<h2 id="数据管理方式"><a href="#数据管理方式" class="headerlink" title="数据管理方式"></a>数据管理方式</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/../../_resources/1bc830a1dc2dec5d2feefff8ce6184a2" alt="数据管理三个阶段的比较"></p>
+<h2 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h2><ol>
+<li>概念模型</li>
+<li>逻辑模型</li>
+<li>物理模型</li>
+</ol>
+<h3 id="概念模型"><a href="#概念模型" class="headerlink" title="概念模型"></a>概念模型</h3><p>用于数据库设计， 用 E-R 图来描述现实世界的概念模型。</p>
+<p>概念：实体、属性、码、实体型、实体集、联系。</p>
+<h3 id="逻辑模型"><a href="#逻辑模型" class="headerlink" title="逻辑模型"></a>逻辑模型</h3><p>用于 DBMS 实现。</p>
+<blockquote>
+<p>问题：如何“多快好省”地将信息世界转换为机器世界？</p>
+<p>方案 1：尽量独立于应用层，采用“中立”的方式表达概念模型，体现为<strong>关系数据库</strong></p>
+<p>方案 2：在应用层中，使用特定数据结构，并在逻辑模型中高效支持这一数据结构，体现为 NoSQL 数据库</p>
+<p>方案*：通用数据结构采用方案 1，关键性数据结构采用方案 2</p>
+</blockquote>
+<h4 id="关系模型的数据结构"><a href="#关系模型的数据结构" class="headerlink" title="关系模型的数据结构"></a>关系模型的数据结构</h4><p>规范条件：关系必须是规范化的，满足一定的规范条件。</p>
+<p>最基本的规范条件（1NF）：关系的每一个分量必须是一个不可分的数据项，不允许表中还有表。</p>
+<p>关系的完整性约束条件：实体完整性、参照完整性、用户定义的完整性。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/../../_resources/777c2d6151d3592a61e5d36ca8bd228c" alt="术语对比"></p>
+<h4 id="关系模式的优缺点"><a href="#关系模式的优缺点" class="headerlink" title="关系模式的优缺点"></a>关系模式的优缺点</h4><p><strong>优点：</strong></p>
+<ol>
+<li>建立在严格的数学概念的基础上</li>
+<li>概念单一<ol>
+<li>实体和各类联系都用关系来表示</li>
+<li>对数据的检索结果也是关系</li>
+</ol>
+</li>
+<li>关系模型的存取路径对用户透明<ol>
+<li>具有更高的数据独立性，更好的安全保密性</li>
+<li>简化了程序员的工作和数据库开发建立的工作</li>
+</ol>
+</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>存取路径对用户透明，查询效率往往不如格式化数据模型</li>
+<li>为提高性能，必须对用户的查询请求进行优化，增加了开发 DBMS 的难度</li>
+</ol>
+<h4 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h4><ol>
+<li>基于 Key-Value 存储模型</li>
+<li>BigTable 模型：<code>(row:string, column:string, time:int64) ==&gt; string</code></li>
+<li>基于文档模型</li>
+<li>基于图模型：记为</li>
+</ol>
+<p>， 为节点集合，每个节点具有若干属性，</p>
+<ol>
+<li>为边集合，也可以具有若干属性。</li>
+</ol>
+<h2 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/../../_resources/d2761014e38feb0066836f9bbf96df26"></p>
+<p>一个数据库只有一个模式、内模式，模式与外模式、外模式与应用程序是一对多的。</p>
+<ul>
+<li>三级模式是对数据的三个抽象级别</li>
+<li>二级映象在数据库管理系统内部实现这三个抽象层次的联系和转换<ul>
+<li>外模式&#x2F;模式映像：保证了数据的<strong>逻辑独立性</strong></li>
+<li>模式&#x2F;内模式映像：保证了数据的<strong>物理独立性</strong></li>
 </ul>
-<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>存储一维数组容器的容器</p>
-<h3 id="定义格式-1"><a href="#定义格式-1" class="headerlink" title="定义格式"></a>定义格式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int [][]a=new int[m][n];</span><br><span class="line">int []arr1=&#123;1,2,3&#125;;</span><br><span class="line">int []arr2=&#123;1,2,3,4&#125;;</span><br><span class="line">int [][]arr=new int[3][3];</span><br><span class="line">arr[0]=arr1;</span><br><span class="line">arr[1]=arr2;</span><br><span class="line">//通过提前初始化一位数组再放入二维数组中就可以访问索引[2][3]</span><br><span class="line">int [][]a=new int[][]&#123;&#123;&#125;,&#123;&#125;,&#123;&#125;&#125;;</span><br><span class="line">int [][]arr=&#123;&#123;&#125;,&#123;&#125;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="数据库系统的组成"><a href="#数据库系统的组成" class="headerlink" title="数据库系统的组成"></a>数据库系统的组成</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/../../_resources/8abfa4927a52a31392df20df73dc5632"></p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -119,14 +179,14 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/02/20/Java-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6/">Java 垃圾回收机制</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/19/Java-Random/">Java 随机数</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/02/29/Java-Stream%E6%B5%81/">Java Stream��</a></div></section></div>
 
 <div class="related-wrap" id="related-posts">
     <section class='header'>
       <div class='title cap theme'>您可能感兴趣的文章</div>
     </section>
     <section class='body'>
-    <div class="related-posts"><a class="item" href="\2024\02\16\Java-数据类型\" title="Java 数据类型"><span class="title">Java 数据类型</span></a></div></section></div>
+    <div class="related-posts"><a class="item" href="\2024\02\14\1-两数之和\" title="1.两数之和"><span class="title">1.两数之和</span></a></div></section></div>
 
 
 
